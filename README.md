@@ -1,6 +1,6 @@
 # Commit Message Survey
 
-Survey link: https://malomalsky.github.io/commit-survey-site/
+TODO
 
 ## Description
 
