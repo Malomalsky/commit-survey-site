@@ -32,31 +32,16 @@ th{background:#fafafa;font-weight:500;color:#4a5568}
 td{font-family:ui-monospace,monospace;color:#718096}
 </style>
 <div class="item">
-<div class="hdr"><span class="id">pytorch_at_check</span>
-<span class="meta">files: 1 | +1/-1</span></div>
-<div class="title">Option A: Change AT_CHECK to TORCH_CHECK in python_arg_parser.h</div>
-<div class="title ref">Option B: chore(torch/csrc): Chore(torch/csrc): Replace AT_CHECK with TORCH_CHECK…</div>
+<div class="hdr"><span class="id">binary_to_octal_adhoc</span>
+<span class="meta">files: 0 | +0/-0</span></div>
+<div class="title">Option A: chore: Rename Bin_to_octal.py to Conversions/binary_to_octal.py(# 5981)…</div>
+<div class="title ref">Option B: Update and rename bin_to_octal.py to binary_to_octal.py ()</div>
 <div class="question">Which commit message is better?</div>
-<div class="vote-bar" data-id='pytorch_at_check' data-next=''><a class="vote-btn" data-choice='reference' href='#'>A</a><a class="vote-btn" data-choice='model' href='#'>B</a><a class="vote-btn" data-choice='tie' href='#'>Equal</a><a class="vote-btn" data-choice='skip' href='#'>Skip</a></div>
-<div class="anchors">Anchors: <span class="chip">python_arg_parser.h</span></div>
-<details open><summary>Files</summary><table><tr><th>Path</th></tr>
-<tr><td>torch/csrc/utils/python_arg_parser.h</td></tr>
-</table></details>
+<div class="vote-bar" data-id='binary_to_octal_adhoc' data-next='https://malomalsky.github.io/commit-survey-site/items/pytorch_at_check.html'><a class="vote-btn" data-choice='model' href='#'>A</a><a class="vote-btn" data-choice='reference' href='#'>B</a><a class="vote-btn" data-choice='tie' href='#'>Equal</a><a class="vote-btn" data-choice='skip' href='#'>Skip</a></div>
+<div class="anchors">Anchors: <span class="chip">bin_string</span><span class="chip">bin_to_octal.py</span><span class="chip">binary_to_octal.py</span><span class="chip">bin_string_in_3_list</span><span class="chip">bin_to_octal</span></div>
 <details open><summary>Diff</summary>
 <pre class="diff">
-<span class="hdr">diff --git a/torch/csrc/utils/python_arg_parser.h b/torch/csrc/utils/python_arg_parser.h</span>
-<span class="ctx">index e432b98ff235..86e990ab11ab 100644</span>
-<span class="hdr">--- a/torch/csrc/utils/python_arg_parser.h</span>
-<span class="hdr">+++ b/torch/csrc/utils/python_arg_parser.h</span>
-<span class="hdr">@@ -439,7 +439,7 @@ inline at::MemoryFormat PythonArgs::toMemoryFormat(int i) {</span>
-<span class="ctx"> </span>
-<span class="ctx"> inline at::QScheme PythonArgs::toQScheme(int i) {</span>
-<span class="ctx">   if (!args[i]) return at::kPerTensorAffine;</span>
-<span class="del">-  AT_CHECK(THPQScheme_Check(args[i]), &quot;qscheme arg must be an instance of the torch.qscheme&quot;);</span>
-<span class="add">+  TORCH_CHECK(THPQScheme_Check(args[i]), &quot;qscheme arg must be an instance of the torch.qscheme&quot;);</span>
-<span class="ctx">   const auto qscheme = reinterpret_cast&lt;THPQScheme*&gt;(args[i]);</span>
-<span class="ctx">   return qscheme-&gt;qscheme;</span>
-<span class="ctx"> }</span>
+<span class="ctx">similarity index 96 % &lt;nl&gt; rename from conversions / bin_to_octal . py &lt;nl&gt; rename to conversions / binary_to_octal . py &lt;nl&gt; mmm a / conversions / bin_to_octal . py &lt;nl&gt; ppp b / conversions / binary_to_octal . py &lt;nl&gt; def bin_to_octal ( bin_string : str ) - &gt; str : &lt;nl&gt; while len ( bin_string ) % 3 ! = 0 : &lt;nl&gt; bin_string = &quot; 0 &quot; + bin_string &lt;nl&gt; bin_string_in_3_list = [ &lt;nl&gt; - bin_string [ index : index + 3 ] &lt;nl&gt; + bin_string [ index : index + 3 ] &lt;nl&gt; for index , value in enumerate ( bin_string ) &lt;nl&gt; if index % 3 = = 0 &lt;nl&gt; ] &lt;nl&gt;</span>
 </pre>
 </details>
 <script>(function(){const FORM='https://script.google.com/macros/s/AKfycbwr_vEK2da4tzmnJy-LHrKdu90GrZlfblXpNmwskDrR3w4BxMHWEJxRIqw9VPyPSgCz/exec';const qs=new URLSearchParams(window.location.search);const user=qs.get('u')||'';document.querySelectorAll('.vote-bar').forEach(bar=>{const id=bar.dataset.id;const next=bar.dataset.next||'';bar.querySelectorAll('.vote-btn').forEach(btn=>{btn.addEventListener('click',async ev=>{ev.preventDefault();const choice=btn.dataset.choice;btn.textContent='Sending...';btn.disabled=true;try{const params=new URLSearchParams();params.set('id',id);params.set('choice',choice);if(user)params.set('u',user);const resp=await fetch(FORM,{method:'POST',mode:'no-cors',body:params});if(next){setTimeout(()=>{window.location.href=next;},300);}else{btn.textContent='✓ Recorded';}}catch(e){btn.textContent='Error - Click to retry';btn.disabled=false;}});});});})();</script>

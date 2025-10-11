@@ -34,10 +34,10 @@ td{font-family:ui-monospace,monospace;color:#718096}
 <div class="item">
 <div class="hdr"><span class="id">django_deletion_defaultdict</span>
 <span class="meta">files: 1 | +12/-13</span></div>
-<div class="title">Option A: Used defaultdict in deletion.Collector.</div>
-<div class="title ref">Option B: refactor(django/db): Counter defaultdict partial</div>
+<div class="title">Option A: refactor(django/db): Counter defaultdict partial</div>
+<div class="title ref">Option B: Used defaultdict in deletion.Collector.</div>
 <div class="question">Which commit message is better?</div>
-<div class="vote-bar" data-id='django_deletion_defaultdict' data-next='https://malomalsky.github.io/commit-survey-site/items/binary_to_octal_adhoc.html'><a class="vote-btn" data-choice='reference' href='#'>A</a><a class="vote-btn" data-choice='model' href='#'>B</a><a class="vote-btn" data-choice='tie' href='#'>Equal</a><a class="vote-btn" data-choice='skip' href='#'>Skip</a></div>
+<div class="vote-bar" data-id='django_deletion_defaultdict' data-next='https://malomalsky.github.io/commit-survey-site/items/binary_to_octal_adhoc.html'><a class="vote-btn" data-choice='model' href='#'>A</a><a class="vote-btn" data-choice='reference' href='#'>B</a><a class="vote-btn" data-choice='tie' href='#'>Equal</a><a class="vote-btn" data-choice='skip' href='#'>Skip</a></div>
 <div class="anchors">Anchors: <span class="chip">Counter</span><span class="chip">self.data</span><span class="chip">self.field_updates</span></div>
 <details open><summary>Files</summary><table><tr><th>Path</th></tr>
 <tr><td>django/db/models/deletion.py</td></tr>
@@ -78,5 +78,5 @@ td{font-family:ui-monospace,monospace;color:#718096}
 <span class="add">+        self.field_updates[model][field, value].update(objs)</span>
 </pre>
 </details>
-<script>(function(){const FORM='https://script.google.com/macros/s/AKfycbwr_vEK2da4tzmnJy-LHrKdu90GrZlfblXpNmwskDrR3w4BxMHWEJxRIqw9VPyPSgCz/exec';const qs=new URLSearchParams(window.location.search);const user=qs.get('u')||'';document.querySelectorAll('.vote-bar').forEach(bar=>{const id=bar.dataset.id;const next=bar.dataset.next||'';bar.querySelectorAll('.vote-btn').forEach(btn=>{btn.addEventListener('click',ev=>{ev.preventDefault();const choice=btn.dataset.choice;const params=new URLSearchParams();params.set('id',id);params.set('choice',choice);if(user)params.set('u',user);if(next){const url=new URL(next, window.location.href);if(user){url.searchParams.set('u',user);}params.set('next',url.href);}window.location.href=FORM+'?'+params.toString();});});});})();</script>
+<script>(function(){const FORM='https://script.google.com/macros/s/AKfycbwr_vEK2da4tzmnJy-LHrKdu90GrZlfblXpNmwskDrR3w4BxMHWEJxRIqw9VPyPSgCz/exec';const qs=new URLSearchParams(window.location.search);const user=qs.get('u')||'';document.querySelectorAll('.vote-bar').forEach(bar=>{const id=bar.dataset.id;const next=bar.dataset.next||'';bar.querySelectorAll('.vote-btn').forEach(btn=>{btn.addEventListener('click',async ev=>{ev.preventDefault();const choice=btn.dataset.choice;btn.textContent='Sending...';btn.disabled=true;try{const params=new URLSearchParams();params.set('id',id);params.set('choice',choice);if(user)params.set('u',user);const resp=await fetch(FORM,{method:'POST',mode:'no-cors',body:params});if(next){setTimeout(()=>{window.location.href=next;},300);}else{btn.textContent='✓ Recorded';}}catch(e){btn.textContent='Error - Click to retry';btn.disabled=false;}});});});})();</script>
 </div>
