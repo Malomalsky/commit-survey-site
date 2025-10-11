@@ -1,6 +1,6 @@
 # Commit Message Survey
 
-TODO
+Survey link: https://malomalsky.github.io/commit-survey-site/
 
 ## Description
 
@@ -8,7 +8,7 @@ This survey evaluates AI-generated commit messages by comparing them with human-
 
 ## Format
 
-- 8 comparisons total
+- 7 comparisons total
 - Each item shows two commit messages (A and B) and code diff
 - Response options: A / B / Equal / Skip
 - Responses are recorded via Google Forms
